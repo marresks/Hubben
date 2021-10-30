@@ -1,0 +1,2933 @@
+using System;
+
+namespace HubbenAllt
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            u93Call();
+
+        }
+
+
+
+
+        static void u1()
+        {
+            int num = 5;
+            string stringy = "Hej";
+            char c = 's';
+            bool monkahmm = true;
+        }
+        static void u2()
+        {
+            Console.Write("Enter Name: ");
+            string name = Console.ReadLine();
+            Console.Write("Enter address: ");
+            string address = Console.ReadLine();
+
+            Console.WriteLine($"Hello {name}, you live at {address}");
+
+        }
+        static void u3()
+        {
+            Console.WriteLine("Enter number: ");
+            try
+            {
+                int num = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine(num);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+        static void u4()
+        {
+            int x = 3;
+            double y = 3.5;
+
+            string inty = Convert.ToString(x);
+            int doubly = Convert.ToInt32(y);
+            string doubley = Convert.ToString(y);
+
+            Console.WriteLine($"{inty} + {doubly} + {doubley}");
+        }
+        static void u5()
+        {
+            // Explicit
+            string input = " ";
+            int.TryParse(input, out int y);
+            string s = y.ToString();
+
+            // Implicit
+            int a = 15;
+            int b = 3;
+            double kvot = a / b;
+
+            // Explicit med parenteser. Notera att detta inte fungerar i alla fall, t.ex. är det inte möjligt att byta ut double mot en string.
+            int x = 10;
+            double d = (double)x;
+        }
+        static void u6()
+        {
+            Console.WriteLine("Enter first num");
+            int.TryParse(Console.ReadLine(), out int num1);
+            Console.WriteLine("Enter second num");
+            int.TryParse(Console.ReadLine(), out int num2);
+
+            Console.WriteLine(num1 + num2);
+        }
+        static void u7()
+        {
+            Console.WriteLine("Enter first whole num");
+            int.TryParse(Console.ReadLine(), out int num1);
+            Console.WriteLine("Enter second whole num");
+            int.TryParse(Console.ReadLine(), out int num2);
+
+            Console.WriteLine(num1 / num2);
+
+            Console.WriteLine("Enter first decimal num");
+            double.TryParse(Console.ReadLine(), out double num3);
+            Console.WriteLine("Enter second decimal num");
+            double.TryParse(Console.ReadLine(), out double num4);
+            double result = (num3 / num4);
+            Console.WriteLine(result);
+
+        }
+        static void u8()
+        {
+            Console.WriteLine("Enter first whole num");
+            int.TryParse(Console.ReadLine(), out int num1);
+            Console.WriteLine("Enter second whole num");
+            int.TryParse(Console.ReadLine(), out int num2);
+
+            Console.WriteLine($"Differense is: {num1 - num2} Product is: {num1 * num2} quota is: {num1 / num2}.");
+        }
+        static void u9()
+        {
+            Console.WriteLine("Enter first whole num");
+            int.TryParse(Console.ReadLine(), out int num1);
+            Console.WriteLine("Enter second whole num");
+            int.TryParse(Console.ReadLine(), out int num2);
+
+            Console.WriteLine($"PRE FLIP: First num is {num1}. Second num is {num2}.");
+
+            int temp = num1;
+            num1 = num2;
+            num2 = temp;
+
+            Console.WriteLine($"Post flip: First num is {num1}. Second num is {num2}.");
+
+
+        }
+        static void u10()
+        {
+            Console.WriteLine("Enter first whole num");
+            int.TryParse(Console.ReadLine(), out int num1);
+            Console.WriteLine("Enter second whole num");
+            int.TryParse(Console.ReadLine(), out int num2);
+            Console.WriteLine("Enter third whole num");
+            int.TryParse(Console.ReadLine(), out int num3);
+
+            int result1 = ((num1 + num2) * num3);
+            int result2 = ((num1 * num2) + (num2 * num3));
+
+            Console.WriteLine($"(X+Y)*Z = {result1}.\nX*Y+Y*Z = {result2}.");
+        }
+        static void u11()
+        {
+            Console.WriteLine("Welcome to speed calculator ");
+            Console.WriteLine("Enter distance");
+            double.TryParse(Console.ReadLine(), out double s);
+            Console.WriteLine("Enter time");
+            double.TryParse(Console.ReadLine(), out double t);
+
+            double v = s / t;
+
+            Console.WriteLine("Speed is: " + v + "km/h");
+
+        }
+        static void u12()
+        {
+            Console.WriteLine("Enter first name");
+            string first = Console.ReadLine();
+            Console.WriteLine("Enter last name");
+            string last = Console.ReadLine();
+
+            Console.WriteLine(first + " " + last);
+        }
+        static void u13()
+        {
+            Console.WriteLine("Calculate modulus: ");
+            Console.WriteLine("Enter first whole num");
+            int.TryParse(Console.ReadLine(), out int num1);
+            Console.WriteLine("Enter second whole num");
+            int.TryParse(Console.ReadLine(), out int num2);
+
+
+            int result = num1 % num2;
+            Console.WriteLine(result);
+        }
+        static void u14()
+        {
+            //static int RäknaUt3(int num1, int num2, int num3){}
+            //static bool IsCorrect(int num1){}
+            //static int Date(int num1)
+            //Static void PrintArray(string[] arr){}
+        }
+        static bool u15KontrolleraRader(string one, string two)
+        {
+            if (one == two)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        static int u16(int one, int two)
+        {
+            if (one % 2 != 0 && two % 2 != 0)
+            {
+                int result = one + two;
+                return result;
+            }
+            else
+            {
+                Console.WriteLine("The numbers are not odd.");
+                return 0;
+            }
+        }
+        static void u17PrintUserInfo(string name, string number)
+        {
+            Console.WriteLine($"Hello {name}");
+            Console.WriteLine($"Your number is: {number}");
+        }
+        static void u17PrintUserInfo(string name, string number, int year)
+        {
+            Console.WriteLine($"Hello {name}");
+            Console.WriteLine($"Your number is: {number}");
+            Console.WriteLine($"Your age is: {2021 - year}");
+        }
+        static bool u18OddOrEven(double num)
+        {
+            if (num % 2 == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        static double u18Divider(double num)
+        {
+            if (u18OddOrEven(num) == true)
+            {
+                return (num / 2);
+            }
+            else
+            {
+                return (num / 5);
+            }
+        }
+        static void u19Menu()
+        {
+            Console.WriteLine("Chose what you would like to do:\n1= Sum 3 numbers\n2= Decide if num is positive or negative\n3= Decide if num is even or odd THEN if both are positive; Sum, if both are negative; multiply, if they dont match; return 0");
+            int.TryParse(Console.ReadLine(), out int choice);
+            switch (choice)
+            {
+                case 1:
+                    Console.WriteLine("Enter first num: ");
+                    int.TryParse(Console.ReadLine(), out int x);
+                    Console.WriteLine("Enter second num: ");
+                    int.TryParse(Console.ReadLine(), out int y);
+                    Console.WriteLine("Enter third num: ");
+                    int.TryParse(Console.ReadLine(), out int z);
+                    Console.WriteLine(u19Sum3(x, y, z));
+                    break;
+                case 2:
+                    Console.WriteLine("Enter num: ");
+                    int.TryParse(Console.ReadLine(), out int ispositive);
+                    bool test = u19Ispositive(ispositive);
+                    if (test == true)
+                    {
+                        Console.WriteLine($"{ispositive} is even");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{ispositive} is odd");
+                    }
+                    break;
+                case 3:
+                    Console.WriteLine("Enter first num: ");
+                    int.TryParse(Console.ReadLine(), out int num1);
+                    Console.WriteLine("Enter second num: ");
+                    int.TryParse(Console.ReadLine(), out int num2);
+                    Console.WriteLine(u19case3(num1, num2));
+                    break;
+                default:
+                    Console.WriteLine("Incorrect input.");
+                    break;
+
+
+
+            }
+        }
+        static int u19Sum3(int x, int y, int z)
+        {
+            int result = x + y + z;
+            return result;
+        }
+        static bool u19Ispositive(int x)
+        {
+            if (x >= 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        static int u19case3(int x, int y)
+        {
+            if (x > 0 && y > 0)
+            {
+                int result = x + y;
+                return result;
+            }
+            else if (x < 0 && y < 0)
+            {
+                int result = x * y;
+                return result;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        static void u20()
+        {
+            int lika1 = 7;
+            Console.WriteLine("Enter num");
+            int.TryParse(Console.ReadLine(), out int num);
+            if (num != 5 && num < 10)
+            {
+                Console.WriteLine("Not 5 and less than 10");
+
+            }
+            if (lika1 == num)
+            {
+                Console.WriteLine($"{num} is the same as variable");
+            }
+            Console.WriteLine("Enter string: ");
+            string stringy = Console.ReadLine();
+
+            if (stringy.Contains('h') || stringy.Contains('3'))
+            {
+                Console.WriteLine("True");
+            }
+            else
+            {
+                Console.WriteLine("False");
+            }
+
+
+
+        }
+        static void u21()
+        {
+            Console.WriteLine("Check if numbers are odd or even: ");
+            Console.WriteLine("Enter first whole num");
+            int.TryParse(Console.ReadLine(), out int num1);
+            Console.WriteLine("Enter second whole num");
+            int.TryParse(Console.ReadLine(), out int num2);
+
+            if (num1 % 2 != 0 && num2 % 2 != 0)
+            {
+                Console.WriteLine("Both numbers are odd");
+            }
+            else
+            {
+                Console.WriteLine("At least one number is even.");
+            }
+
+        }
+        static void u22()
+        {
+            Console.WriteLine("see if num is positive ");
+            Console.WriteLine("Enter num");
+            int.TryParse(Console.ReadLine(), out int num1);
+
+            if (num1 >= 0)
+            {
+                Console.WriteLine($"{num1} is positive");
+            }
+            else
+            {
+                Console.WriteLine($"{num1} is negative");
+            }
+        }
+        static void u23()
+        {
+            Console.WriteLine("Check if year is a skottår: ");
+
+            bool f = false;
+            while (f == false)
+            {
+                Console.WriteLine("Enter year: ");
+                int.TryParse(Console.ReadLine(), out int year);
+                if (year <= 0)
+                {
+                    Console.WriteLine("You need to enter a year after year 0");
+                }
+                else
+                {
+                    if (year % 4100 == 0 || year % 400 == 0)
+                    {
+                        Console.WriteLine($"{year} is skottår");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{year} is not skottår");
+                    }
+                    f = true;
+                }
+            }
+
+        }
+        static void u24()
+        {
+            Console.Write("Enter num: ");
+            int.TryParse(Console.ReadLine(), out int x);
+            if (x == 33)
+            {
+                Console.WriteLine(x + 9);
+            }
+            else if (x >= 150)
+            {
+                Console.WriteLine(x / 2);
+            }
+            else
+            {
+                Console.WriteLine(x * x);
+            }
+
+
+
+        }
+        static void u25()
+        {
+            Console.WriteLine("Welcome to see if bath is ready: ");
+            Console.WriteLine("Does the bath have water? If it does, answer with: true, yes or y");
+            string HasWater = Console.ReadLine();
+            HasWater.ToUpper();
+
+            if (HasWater.ToUpper() == "TRUE" || HasWater.ToUpper() == "YES" || HasWater.ToUpper() == "Y")
+            {
+                Console.WriteLine("Enter temp of water: ");
+                int.TryParse(Console.ReadLine(), out int temp);
+
+                if (temp >= 30 && temp <= 42)
+                {
+                    Console.WriteLine($"Water has temp of {temp} which is good!");
+                }
+                else if (temp > 42)
+                {
+                    Console.WriteLine($"Water has temp of {temp} which is too hot!");
+                }
+                else
+                {
+                    Console.WriteLine($"Water has temp of {temp} which is too cold!");
+                }
+
+
+
+            }
+            else
+            {
+                Console.WriteLine("You need to fill the bath with water first");
+            }
+
+        }
+        static void u26()
+        {
+            Console.Write("Enter age: ");
+
+            if (int.TryParse(Console.ReadLine(), out int age))
+            {
+                if (age >= 16 && age <= 19)
+                {
+                    Console.WriteLine($"Your category is Teenager");
+                }
+                else if (age >= 20 && age <= 29)
+                {
+                    Console.WriteLine("Your category is young adult");
+                }
+                else if (age >= 30 && age <= 39)
+                {
+                    Console.WriteLine("Your category is adult");
+                }
+                else if (age >= 40 && age <= 49)
+                {
+                    Console.WriteLine("Your category is middle aged");
+                }
+                else if (age >= 50 && age <= 64)
+                {
+                    Console.WriteLine("Your category is older");
+                }
+                else
+                {
+                    Console.WriteLine("Your age does not exist in a category");
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("Enter a number");
+            }
+        }
+        static void u27()
+        {
+            Console.WriteLine("Check to see which grade student got");
+            Console.Write("Enter students points on tenta: ");
+            if (int.TryParse(Console.ReadLine(), out int tenta))
+            {
+                Console.Write("Enter students extra points: ");
+                if (int.TryParse(Console.ReadLine(), out int extra))
+                {
+                    if (tenta + extra < 60)
+                    {
+                        Console.WriteLine($"Grade: U. With {tenta + extra} points.");
+                    }
+                    else if (tenta + extra >= 60 && tenta + extra <= 84)
+                    {
+                        Console.WriteLine($"Grade: G. With {tenta + extra} points.");
+                    }
+                    else if (tenta + extra >= 85 && tenta + extra <= 100)
+                    {
+                        Console.WriteLine($"Grade: VG. With {tenta + extra} points.");
+                    }
+                    else if (tenta + extra > 0 || tenta + extra > 100)
+                    {
+                        Console.WriteLine("Something went wrong with input");
+                    }
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("Enter a number");
+            }
+        }
+        static void u28()
+        {
+            Console.Write("Enter num: ");
+            int.TryParse(Console.ReadLine(), out int day);
+            switch (day)
+            {
+                case 1:
+                    Console.WriteLine("Day = monday");
+                    break;
+                case 2:
+                    Console.WriteLine("Day = tuesday");
+                    break;
+                case 3:
+                    Console.WriteLine("Day = wednesday");
+                    break;
+                case 4:
+                    Console.WriteLine("Day = thursday");
+                    break;
+                case 5:
+                    Console.WriteLine("Day = friday");
+                    break;
+                case 6:
+                    Console.WriteLine("Day = saturday");
+                    break;
+                case 7:
+                    Console.WriteLine("Day = sunday");
+                    break;
+                default:
+                    Console.WriteLine("Incorrect input");
+                    break;
+
+            }
+        }
+        static void u29()
+        {
+            Console.Write("Enter day you'd like to see weather for: ");
+            string day = Console.ReadLine();
+            string daybig = day.ToUpper();
+
+            switch (daybig)
+            {
+                case "MONDAY":
+                case "MON":
+                case "1":
+                    Console.WriteLine("Mon: Sunny and around >25C");
+                    break;
+                case "TUESDAY":
+                case "TUE":
+                case "2":
+                    Console.WriteLine("Tue: Cloudy and around 22C");
+                    break;
+                case "WEDNESDAY":
+                case "WED":
+                case "3":
+                    Console.WriteLine("Wed: Rain and <16C");
+                    break;
+                case "THURSDAY":
+                case "THU":
+                case "4":
+                    Console.WriteLine("Thu: Sun and rain, >20C");
+                    break;
+                case "FRIDAY":
+                case "FRI":
+                case "5":
+                    Console.WriteLine("Fri: Unreasonably warm, around 30C");
+                    break;
+                case "SATURDAY":
+                case "SAT":
+                case "6":
+                    Console.WriteLine("Sat: Unreasonably warm, around 32C");
+                    break;
+                case "SUNDAY":
+                case "SUN":
+                case "7":
+                    Console.WriteLine("Sun: Rain and wind, <18C");
+                    break;
+                default:
+                    Console.WriteLine("Incorrect input");
+                    break;
+
+            }
+
+
+        }
+        static void u30()
+        {
+            Console.Write("Enter buy price: ");
+            if (double.TryParse(Console.ReadLine(), out double buy))
+            {
+                Console.Write("Enter sell price: ");
+                if (double.TryParse(Console.ReadLine(), out double sell))
+                {
+                    if (buy < sell)
+                    {
+                        Console.WriteLine($"Profit is: {sell - buy}, that is {(sell - buy) / buy * 100}%");
+                    }
+                    else if (sell < buy)
+                    {
+                        Console.WriteLine($"Loss is: {buy - sell}, that is {(buy - sell) / buy * 100}%");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Your trade is +-0 (even)");
+                    }
+
+                }
+                else
+                {
+                    Console.WriteLine("Enter a number.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Enter a number.");
+            }
+        }
+        static void u31()
+        {
+            Console.WriteLine("Check type of triangle: ");
+            Console.Write("Enter a.lenght");
+            if (int.TryParse(Console.ReadLine(), out int a))
+            {
+                Console.Write("Enter b.lenght");
+                if (int.TryParse(Console.ReadLine(), out int b))
+                {
+                    Console.Write("Enter c.lenght");
+                    if (int.TryParse(Console.ReadLine(), out int c))
+                    {
+                        if (a == b && a == c)
+                        {
+                            Console.WriteLine("Triangel är liksidig");
+                        }
+                        else if (a == b || a == c || b == c)
+                        {
+                            Console.WriteLine("Triangeln är likbent");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Triangeln är oliksidig");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("input must be a number");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("input must be a number");
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("input must be a number");
+            }
+        }
+        static void u32()
+        {
+            Console.WriteLine("Welcome, chose one option: ");
+            Console.WriteLine("1= Calculate area of circle\n2= Calculate area of rectangle\n3= Exit program");
+            string choice = Console.ReadLine();
+
+            switch (choice)
+            {
+                case "1":
+                    Console.Write("Enter radius of circle: ");
+                    if (double.TryParse(Console.ReadLine(), out double radius))
+                    {
+                        double circlearea = (Math.PI * (radius * radius));
+                        Console.WriteLine($"Area of the circle is {circlearea}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Input must be a number, try again.");
+                    }
+                    break;
+                case "2":
+                    Console.Write("Enter height of rectangle: ");
+                    if (double.TryParse(Console.ReadLine(), out double height))
+                    {
+                        Console.Write("Enter lenght of rectangle: ");
+                        if (double.TryParse(Console.ReadLine(), out double lenght))
+                        {
+                            double rectanglearea = height * lenght;
+                            Console.WriteLine($"Area of the rectangle is: {rectanglearea}");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Input must be a number.");
+                            u32();
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Input must be a number.");
+                        u32();
+                    }
+                    break;
+                case "3":
+                    Environment.Exit(0);
+                    break;
+                default:
+                    Console.WriteLine("Incorrect input. ");
+                    u32();
+                    break;
+            }
+
+        }
+        static void u33()
+        {
+            for (int i = 1; i <= 50; i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+        static void u34()
+        {
+            for (int i = 1; i <= 50; i++)
+            {
+                if (i == 10)
+                {
+                    Console.Write(i);
+                    Console.WriteLine();
+                }
+                else if (i == 20)
+                {
+                    Console.Write(i);
+                    Console.WriteLine();
+                }
+                else if (i == 30)
+                {
+                    Console.Write(i);
+                    Console.WriteLine();
+                }
+                else if (i == 40)
+                {
+                    Console.Write(i);
+                    Console.WriteLine();
+                }
+                else if (i == 50)
+                {
+                    Console.Write(i);
+                    Console.WriteLine();
+                }
+                else
+                {
+                    Console.Write(i + ", ");
+                }
+            }
+        }
+        static void u35()
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.Write("\n");
+            }
+        }
+        static void u36()
+        {
+            int count = 1;
+            for (int i = 5; i >= 1; i--)
+            {
+                for (int j = i - 1; j >= 1; j--)
+                    Console.Write(" ");
+                for (int k = 1; k <= count; k++)
+                {
+                    Console.Write("*");
+                    Console.Write(" ");
+                }
+                count++;
+                Console.WriteLine();
+            }
+        }
+        static void u37()
+        {
+            Console.WriteLine("Enter num 1-10");
+            int.TryParse(Console.ReadLine(), out int num);
+            for (int i = 1; i <= num; i++)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write(i);
+                }
+                Console.WriteLine();
+            }
+        }
+        static void u38()
+        {
+            Console.WriteLine("Enter number: ");
+            int.TryParse(Console.ReadLine(), out int iterations);
+
+            for (int i = 0; i < iterations; i++)
+            {
+                for (int j = 1; j <= iterations - i; j++)
+                    Console.Write(" ");
+                for (int k = 1; k <= 2 * i - 1; k++)
+                    Console.Write("*");
+                Console.WriteLine();
+            }
+        }
+        static void u39()
+        {
+            int sum = 0;
+            for (int i = 1; i <= 100; i++)
+            {
+                sum += i;
+            }
+            Console.WriteLine(sum);
+        }
+        static void u40()
+        {
+            int count = 0;
+            int input = 0;
+            int inty = 0;
+            while (inty != -1)
+            {
+                Console.Write("Enter a number");
+                try
+                {
+                    inty = Convert.ToInt32(Console.ReadLine());
+                    if (inty == -1)
+                    {
+                        break;
+                    }
+                    if (inty != 0)
+                    {
+                        input += inty;
+                        count++;
+                    }
+
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message + " Try again ");
+                }
+
+            }
+            int result = (input / count);
+            Console.WriteLine("Average is: " + result);
+        }
+        static void u41()
+        {
+            int sum = 1;
+            Console.WriteLine("Enter num for faculty");
+            try
+            {
+                int num = Convert.ToInt32(Console.ReadLine());
+                for (int i = 1; i <= num; i++)
+                {
+                    sum *= i;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            Console.WriteLine(sum);
+
+        }
+        static void u42(int x)
+        {
+            int sum = 1;
+            if (x > 0)
+            {
+                for (int i = 1; i <= x; i++)
+                {
+                    sum *= i;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Num too low, adding one.");
+                u42(x + 1);
+            }
+            Console.WriteLine(sum);
+        }
+        static void u43(int num)
+        {
+            Console.Write("Enter number to see if its prime:");
+
+            if (num == 1 || num == 2)
+            {
+                Console.WriteLine($"{num} is prime");
+            }
+            else if (num > 2 && num % 2 == 0)
+            {
+                Console.WriteLine($"{num} is not prime");
+            }
+            else if (num < 1)
+            {
+                Console.WriteLine($"{num} must be at least 1");
+            }
+            else
+            {
+                for (int i = 2; i < num; i++)
+                {
+                    if (num % i == 0)
+                    {
+                        Console.WriteLine($"{num} is not prime");
+                        break;
+                    }
+                }
+                Console.WriteLine($"{num} is prime");
+
+            }
+
+        }
+        static bool u43V2(int input)
+        {
+            if (input == 1) return false;
+            if (input == 2) return true;
+
+            for (int i = 2; i * i <= input; i++)
+            {
+                if (input % i == 0)
+                    return false;
+            }
+
+            return true;
+        }
+        static void u44(int input)
+        {
+            // De första fallen kan hanteras via selektion.
+            if (input < 2)
+                Console.WriteLine("Ange ett heltal större än 1.");
+            else
+            {
+                for (int i = 1; i <= input; i++)
+                {
+                    if (u43V2(i))
+                        Console.WriteLine(i + " is a prime.");
+                }
+            }
+        }
+        static void u45()
+        {
+            Console.WriteLine("Enter num");
+            int.TryParse(Console.ReadLine(), out int input);
+            int n1, n2 = 1, n3;
+            n1 = n3 = 0;
+
+            Console.WriteLine(n1);
+            Console.WriteLine(n2);
+
+            for (int i = 2; i < input; i++)
+            {
+                n3 = n1 + n2;
+                Console.WriteLine(n3);
+                n1 = n2;
+                n2 = n3;
+            }
+        }
+        static int[] u46(int x)
+        {
+            int[] arr = new int[10];
+            for (int i = 0; i < 10; i++)
+            {
+                arr[i] = (i + 1) * x;
+            }
+            Console.WriteLine(string.Join(", ", arr));
+            return arr;
+        }
+        static void u47(int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (i == arr.Length - 1)
+                {
+                    Console.Write(arr[i]);
+                }
+                else
+                {
+                    Console.Write(arr[i] + ",");
+                }
+            }
+        }
+        static void u48(int[] arr)
+        {
+            for (int i = arr.Length - 1; i >= 0; i--)
+            {
+                if (i == 0)
+                {
+                    Console.Write(arr[i]);
+                }
+                else
+                {
+                    Console.Write(arr[i] + ",");
+                }
+            }
+
+        }
+        static void u49()
+        {
+
+            int[] arr = { 1, 5, 4, 2, 3, 6, 8, 7, 9 };
+            int big = arr[0];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] > big)
+                {
+                    big = arr[i];
+                }
+            }
+            Console.WriteLine(big);
+        }
+        static void u50()
+        {
+            int[] arr = { 1, 5, 4, 2, 3, 6, 8, 7, 9 };
+            int big = arr[0];
+            int secondbig = arr[0];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] > big)
+                {
+                    secondbig = big;
+                    big = arr[i];
+
+                }
+                else if (arr[i] > secondbig && arr[i] != big)
+                {
+                    secondbig = arr[i];
+                }
+            }
+            Console.WriteLine(secondbig);
+
+
+        }
+        static void u51()
+        {
+            int[] arr1 = { 5, 3, 4 };
+            int[] arr2 = { 13, 1, 10 };
+
+            int[] arr3 = new int[arr1.Length];
+
+            for (int i = 0; i < arr3.Length; i++)
+            {
+                arr3[i] = arr1[i] + arr2[i];
+            }
+
+            for (int i = 0; i < arr3.Length; i++)
+            {
+                if (i == arr3.Length - 1)
+                {
+                    Console.Write(arr3[i]);
+                }
+                else
+                {
+                    Console.Write(arr3[i] + ", ");
+                }
+            }
+        }
+        static int u52(int[] arr, int num)
+        {
+
+            int count = 0;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == num)
+                {
+                    count++;
+                }
+            }
+            return count;
+
+
+        }
+        static void u53(int[] arr)
+        {
+            int count = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (u52(arr, arr[i]) < 2)
+                {
+                    Console.WriteLine($"{arr[i]} is unique");
+                    count++;
+                }
+
+
+            }
+            if (count == 0)
+            {
+                Console.WriteLine("There are no unique numbers.");
+            }
+        }
+        static int[] u54(int[] arr)
+        {
+
+
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                for (int j = 0; j < arr.Length; j++)
+                {
+                    if (arr[i] < arr[j])
+                    {
+                        int temp = arr[j];
+                        arr[j] = arr[i];
+                        arr[i] = temp;
+                    }
+                }
+            }
+            return arr;
+
+        }
+        static bool u55(int[] arr, int num)
+        {
+            int count = 0;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == num)
+                {
+                    count++;
+                }
+            }
+            if (count > 1)
+            {
+                return true;
+            }
+            else if (count < 1)
+            {
+                Console.WriteLine("Num does not exist in arr");
+                return false;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        static void u56()
+        {
+            string stringy = "Hello";
+            int count = 0;
+            foreach (var item in stringy)
+            {
+                count++;
+            }
+            Console.WriteLine($"{stringy} is {count} in lenght");
+        }
+        static void u57()
+        {
+            string stringy = "Hello world!";
+
+            for (int i = stringy.Length - 1; i >= 0; i--)
+            {
+                Console.Write(stringy[i]);
+            }
+        }
+        static void u58LOOPING()
+        {
+            string stringy = "Hello world";
+            char c = ' ';
+            int count = 0;
+
+            for (int i = 0; i < stringy.Length; i++)
+            {
+                if (stringy[i] == c)
+                {
+                    count++;
+                }
+            }
+            if (count > 0)
+            {
+                for (int i = 0; i < stringy.Length; i++)
+                {
+                    if (stringy[i] == c)
+                    {
+
+                    }
+                    else
+                    {
+                        Console.Write(stringy[i]);
+                    }
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("No spaces in string");
+            }
+
+        }
+        static void u58SPLIT()
+        {
+            string stringy = "Hello world";
+            string[] noSpaces = stringy.Split(' ');
+
+            if (noSpaces.Length < 2)
+            {
+                Console.WriteLine("No spaces in string. ");
+            }
+            else
+            {
+                string output = string.Empty;
+                for (int i = 0; i < noSpaces.Length; i++)
+                {
+                    output += noSpaces[i];
+                }
+                Console.WriteLine(output);
+
+            }
+
+
+        }
+        static void u59()
+        {
+            string stringy = "Hello world";
+            char c = 'l';
+            string stringy2 = string.Empty;
+
+            for (int i = 0; i < stringy.Length; i++)
+            {
+                if (stringy[i] == c)
+                {
+
+                }
+                else
+                {
+                    stringy2 += stringy[i];
+                }
+            }
+            Console.WriteLine(stringy2);
+
+        }
+        static void u60()
+        {
+            int letter = 0;
+            int num = 0;
+            int special = 0;
+
+            string stringy = "Hello world! 123";
+
+
+            for (int i = 0; i < stringy.Length; i++)
+            {
+                if (stringy[i] == ' ')
+                {
+
+                }
+                else if (char.IsDigit(stringy[i]))
+                {
+                    num++;
+                }
+                else if (char.IsLetter(stringy[i]))
+                {
+                    letter++;
+                }
+                else
+                {
+                    special++;
+                }
+            }
+            Console.WriteLine($"Letters: {letter}\nNumbers: {num}\nSymbols: {special}");
+        }
+        static string u61a(string s, int x)
+        {
+            string output = string.Empty;
+            for (int i = x; i < s.Length; i++)
+            {
+                output += s[i];
+            }
+            return output;
+
+        }
+        static string u61b(string s, int x, int y)
+        {
+            string output = string.Empty;
+            for (int i = x; i < s.Length && i <= y; i++)
+            {
+                output += s[i];
+            }
+            return output;
+        }
+        static int u62(string s, char c, int start)
+        {
+            int index = 0;
+            int count = 0;
+
+            for (int i = start; i < s.Length; i++)
+            {
+                if (c == s[i])
+                {
+                    index = i;
+                    count++;
+                    return index;
+                }
+            }
+            if (count == 0)
+            {
+                return -1;
+            }
+            return index;
+        }
+        static bool u63(string input, string substring)
+        {
+            // DENNA LÖSNING FUNGERAR EJ???
+
+
+            // Positionen i input för den första bokstaven i substring
+            int index = input.IndexOf(substring[0]);
+            // variabel som tillåter oss att gå vidare till nästa "IndexOf"-värde
+            int pos = 0;
+
+            // Iteration för att om substring[0] t.ex. är 'a' så förekommer det sannolikt flera gånger i strängen.
+            // -1 är felkoden för om tecknet inte hittas i strängen.
+            while (index != -1)
+            {
+                // Felhantering så att vi inte får IndexOutOfRange.
+                // Vi plockar ut en delsträng från input, med samma längd som "substring" och jämför dem mot varandra.
+                if (index + substring.Length < input.Length && input.Substring(index, substring.Length) == substring)
+                    return true;
+
+                // Uppdatera från vilken indexposition vi vill titta på.
+                // Om vi inte gör detta så kommer vi att kolla på t.ex. position 10 för evigt.
+                pos = index + 1;
+                index = input.IndexOf(substring[0], pos);
+                // Alt. Uppgift 7 implementation
+                // index = IndexOfChar(input, substring[0], pos);
+            }
+
+            return false;
+        }
+        static void u64()
+        {
+            int[] arrA = { 1, 2, 3 };
+            int[] arrB = { 1, 2, 3, 4, 5 };
+            if (arrA.Length > arrB.Length)
+            {
+                int[] arrC = new int[arrA.Length];
+                for (int i = 0; i < arrA.Length; i++)
+                {
+                    if (i < arrB.Length)
+                    {
+                        arrC[i] = arrA[i] + arrB[i];
+                    }
+                    else
+                    {
+                        arrC[i] = arrA[i];
+                    }
+                }
+                Console.WriteLine(string.Join(",", arrC));
+            }
+            else
+            {
+                int[] arrC = new int[arrB.Length];
+                for (int i = 0; i < arrB.Length; i++)
+                {
+                    if (i < arrA.Length)
+                    {
+                        arrC[i] = arrA[i] + arrB[i];
+                    }
+                    else
+                    {
+                        arrC[i] = arrB[i];
+                    }
+                }
+                Console.WriteLine(string.Join(",", arrC));
+            }
+
+
+
+
+
+
+
+
+        }
+        static void u65()
+        {
+            Console.Write("Enter amount of guests: ");
+            if (int.TryParse(Console.ReadLine(), out int guests))
+            {
+                int countname = 1;
+                int index = 0;
+                double price = 0;
+
+                int[] ageArr = new int[guests];
+                string[] nameArr = new string[guests];
+
+                while (index < guests)
+                {
+                    Console.Write($"Enter name of guest No. {countname}: ");
+                    nameArr[index] = Console.ReadLine();
+                    Console.Write($"Enter age of {nameArr[index]}: ");
+                    try
+                    {
+                        int age = Convert.ToInt32(Console.ReadLine());
+                        ageArr[index] = age;
+                        index++;
+                        countname++;
+
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                    }
+                }
+                for (int i = 0; i < ageArr.Length; i++)
+                {
+                    if (ageArr[i] >= 3 && ageArr[i] <= 12)
+                    {
+                        price += 50;
+                    }
+                    else if (ageArr[i] >= 65)
+                    {
+                        price += 75;
+                    }
+                    else
+                    {
+                        price += 110;
+                    }
+                }
+                if (ageArr.Length > 4)
+                {
+                    price = price * 0.8;
+                }
+
+                Console.WriteLine($"Your total for {nameArr.Length} guests are: {price}kr");
+
+
+
+            }
+            else
+            {
+                Console.WriteLine("Entry must be a number: ");
+                u65();
+            }
+        }
+        static void u66()
+        {
+            int index = 0;
+            string weightComplete = string.Empty;
+            int count = 0;
+
+            Console.WriteLine("Welcome to BMI calculator");
+            Console.Write("Enter your weight followed by either Kg for kilograms or Lbs for pounds: ");
+            string weight = Console.ReadLine().ToUpper();
+
+            for (int i = 0; i < weight.Length; i++)
+            {
+                if (char.IsDigit(weight[i]))
+                {
+                    index = i;
+                }
+
+            }
+
+            if (weight.Length > 0)
+            {
+                for (int i = 0; i <= index; i++)
+                {
+                    weightComplete += weight[i];
+                }
+            }
+
+
+            if (double.TryParse(weightComplete, out double weightcomplete))
+            {
+                while (count == 0)
+                {
+
+
+                    if (weight.Contains("KG"))
+                    {
+                        Console.Write("Enter height in cm: ");
+                        try
+                        {
+                            double heightCm = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine($"BMI is = {(weightcomplete / ((heightCm / 100) * (heightCm / 100)))}");
+                            count++;
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                    }
+                    else if (weight.Contains("LBS"))
+                    {
+                        Console.Write("Enter integer height in ft: ");
+                        try
+                        {
+                            int heightft = Convert.ToInt32(Console.ReadLine());
+                            Console.Write("Enter integer height for extra inches: ");
+                            int heightinch = Convert.ToInt32(Console.ReadLine());
+                            double heightcomplete = ((heightft * 12) + heightinch);
+                            Console.WriteLine($"BMI is = {(weightcomplete / (heightcomplete * heightcomplete)) * 703}");
+                            count++;
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("You need to type either kg or lbs after your weight, try again.");
+                        u66();
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("Something went wrong...");
+                u66();
+            }
+
+
+
+        }
+        static void u67()
+        {
+            int count = 0;
+            Console.WriteLine("Enter sentence: ");
+            string sentence = Console.ReadLine();
+
+            while (count == 0)
+            {
+                Console.WriteLine("Enter word that you would like to replace: ");
+                string word = Console.ReadLine();
+                if (sentence.Contains(word))
+                {
+                    Console.WriteLine($"Enter a word that you would like to replace {word} with: ");
+                    string replace = Console.ReadLine();
+                    string[] arr = sentence.Split(' ');
+
+
+                    for (int i = 0; i < arr.Length; i++)
+                    {
+                        if (arr[i] == word)
+                        {
+                            arr[i] = replace;
+                        }
+                    }
+
+                    for (int i = 0; i < arr.Length; i++)
+                    {
+                        if (i == arr.Length - 1)
+                        {
+                            Console.Write(arr[i]);
+                        }
+                        else
+                        {
+                            Console.Write(arr[i] + " ");
+                        }
+                    }
+                    count++;
+
+                }
+                else
+                {
+                    Console.WriteLine($"{word} does not occur in sentence");
+
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+        }
+        static int[] u68(int[] arr)
+        {
+
+            int count = 0;
+            int index = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    count++;
+                }
+            }
+            if (count == 0)
+            {
+                return null;
+            }
+            else
+            {
+                int[] uneven = new int[count];
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    if (i % 2 != 0)
+                    {
+                        uneven[index] = arr[i];
+                        index++;
+                    }
+                }
+                return uneven;
+            }
+        }
+        static void u69call()
+        {
+            int SecretNum = u69RandomNum();
+            u69welcome();
+            u69game(SecretNum);
+
+        }
+        static int u69RandomNum()
+        {
+            Random random = new Random();
+
+            int GuessNum = random.Next(0, 100);
+
+            return GuessNum;
+        }
+        static void u69welcome()
+        {
+            Console.WriteLine("Welcome to this guessing game\nA number between 0-100 will be secret, your job is to guess what the number is.\n After each guess you will be prompted with wether your guess was lower or higher than the number.");
+        }
+        static void u69game(int SecretNum)
+        {
+            int guess = -1;
+            while (guess != SecretNum)
+            {
+                Console.Write("Enter guess: ");
+                int.TryParse(Console.ReadLine(), out guess);
+
+                if (guess < SecretNum)
+                {
+                    Console.WriteLine("Your guess lower than the secret number");
+                }
+                else if (guess > SecretNum)
+                {
+                    Console.WriteLine("Your guess higher than the secret number");
+                }
+                else
+                {
+                    Console.WriteLine($"Congratulations! {guess} is the secret number!");
+                }
+
+
+            }
+        }
+        static string u70(string s)
+        {
+
+            if (s.Length > 0)
+            {
+
+
+                string[] sArr = s.Split(' ');
+                string longest = sArr[0];
+
+                for (int i = 0; i < sArr.Length; i++)
+                {
+                    if (longest.Length < sArr[i].Length)
+                        longest = sArr[i];
+                }
+
+                return longest;
+            }
+            else
+            {
+                Console.WriteLine("String must contain something");
+                return null;
+            }
+
+
+
+
+        }
+        static int u71(int n)
+        {
+            int num = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                num += i;
+            }
+            return num;
+
+        }
+        static string u72(string s)
+        {
+
+            string sentence = "";
+            if (s.Length > 1 && s.Length < 100)
+            {
+                for (int i = 0; i < s.Length; i++)
+                {
+                    if (char.IsUpper(s[i]))
+                    {
+                        sentence += char.ToLower(s[i]);
+                    }
+                    else if (char.IsLower(s[i]))
+                    {
+                        sentence += char.ToUpper(s[i]);
+                    }
+                    else
+                    {
+                        sentence += s[i];
+                    }
+                }
+                return sentence;
+            }
+            else
+            {
+                Console.WriteLine("String must be longer than 1 char");
+                return "";
+            }
+        }
+        static int u73(int n, int p)
+        {
+            int result = 1;
+            for (int i = 0; i < p; i++)
+            {
+                result *= n;
+            }
+            return result;
+
+
+        }
+        static void u74(int n, int x, int y)
+        {
+            for (int i = 1; i <= n; i++)
+            {
+                if (i % x == 0 && i % y == 0)
+                {
+                    Console.WriteLine($"FizzBuzz {i}");
+                }
+                else if (i % x == 0)
+                {
+                    Console.WriteLine($"Fizz {i}");
+                }
+                else if (i % y == 0)
+                {
+                    Console.WriteLine($"Buzz {i}");
+                }
+                else
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
+
+
+        }
+        static void u75()
+        {
+            string s = "sirap i paris";
+            string s2 = string.Empty;
+
+            for (int i = s.Length - 1; i >= 0; i--)
+            {
+                s2 += s[i];
+            }
+            if (s == s2)
+            {
+                Console.WriteLine("Sentence is palindrome");
+            }
+            else
+            {
+                Console.WriteLine("Sentence is not palindrome");
+            }
+
+
+
+        }
+        static void u76call()
+        {
+            Console.WriteLine("Välkommen till hotellbokningen!");
+            int[] rum = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+            u76Choice(rum);
+        }
+        static void u76Choice(int[] rum)
+        {
+            int safety = 0;
+            while (safety == 0)
+            {
+                Console.WriteLine("Var vänlig att välja ett alternativ nedan.");
+                Console.WriteLine("0 = Avsluta bokningen\n1 = Boka första bästa rum\n2 = Boka ett specifikt rum\n3 = Avboka ett rum");
+                string val = Console.ReadLine();
+                switch (val)
+                {
+                    case "0":
+                        Environment.Exit(0);
+                        break;
+                    case "1":
+                        u76bokning(rum);
+                        break;
+                    case "2":
+                        u76manuellbokning(rum);
+                        break;
+                    case "3":
+                        int count = 0;
+                        while (count == 0)
+                        {
+                            Console.Write("Ange rumsnummer som du vill avboka: ");
+                            int.TryParse(Console.ReadLine(), out int temp);
+                            if (temp > 0 && temp < 16)
+                            {
+                                int index = temp - 1;
+                                count++;
+                                u76avbokning(rum, index);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Room number must be between 1-15");
+                            }
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Something went wrong, enter a value between 0-3.");
+                        u76Choice(rum);
+                        break;
+                }
+            }
+
+
+        }
+        static bool u76rumbokat(int[] rum, int index)
+        {
+
+            if (rum[index] == 1)
+            {
+                return true;
+            }
+            return false;
+
+        }
+        static void u76bokning(int[] rum)
+        {
+            for (int i = 0; i < rum.Length; i++)
+            {
+                if (rum[i] == 1)
+                {
+
+                }
+                else
+                {
+                    rum[i] = 1;
+                    Console.WriteLine($"rum {i + 1} är nu bokat");
+                    break;
+                }
+
+
+            }
+            u76alltbokat(rum);
+
+
+        }
+        static int[] u76alltbokat(int[] rum)
+        {
+            for (int i = 0; i < rum.Length; i++)
+            {
+                if (rum[i] == 1)
+                {
+
+                }
+                else
+                {
+                    return rum;
+
+                }
+
+
+            }
+            Console.WriteLine("Alla rum är för tillfället bokade");
+            return rum;
+        }
+        static int[] u76avbokning(int[] rum, int index)
+        {
+            if (u76rumbokat(rum, index))
+            {
+                rum[index] = 0;
+                Console.WriteLine($"Ditt rum ({index}) är nu avbokat");
+                return rum;
+            }
+            else
+            {
+                Console.WriteLine("Detta rum är ej bokat");
+                return rum;
+            }
+        }
+        static int[] u76manuellbokning(int[] rum)
+        {
+            Console.WriteLine("Om du önskar avbryta bokning skriv: Exit");
+            Console.WriteLine("Ange numsrummer på det rum du önskar boka: ");
+            string temp = Console.ReadLine().ToUpper();
+            int.TryParse(temp, out int index);
+            if (temp == "EXIT")
+            {
+                Environment.Exit(0);
+                return null;
+            }
+            else if (!u76rumbokat(rum, index))
+            {
+                rum[index] = 1;
+                Console.WriteLine($"Du har nu bokat rum: {index}");
+                return rum;
+            }
+            else
+            {
+                Console.WriteLine("Det rummet är redan bokat, försök igen.");
+                return u76manuellbokning(rum);
+            }
+
+
+
+        }
+        static void u77()
+        {
+            int[] arr = { 10, 63, 15, 25 };
+            int index = arr.Length;
+
+            if (index % 2 != 0)
+            {
+                Console.WriteLine(arr[index / 2]);
+            }
+            else
+            {
+                Console.WriteLine($"{(arr[(index / 2) - 1] + arr[(index / 2)]) / 2}");
+            }
+
+
+        }
+        static void u78()
+        {
+            string s = "apples oranges bananas";
+            string[] arr = s.Split(' ');
+
+            if (arr.Length > 1 && arr.Length < 3)
+            {
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    if (i < arr.Length - 1)
+                    {
+                        Console.Write(arr[i] + " and ");
+                    }
+                    else
+                    {
+                        Console.WriteLine(arr[i]);
+                    }
+                }
+            }
+            else if (arr.Length > 2)
+            {
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    if (i < arr.Length - 2)
+                    {
+                        Console.Write(arr[i] + ", ");
+                    }
+                    else if (i < arr.Length - 1)
+                    {
+                        Console.Write(arr[i] + " and ");
+                    }
+                    else
+                    {
+                        Console.Write(arr[i]);
+                    }
+                }
+            }
+
+
+
+        }
+        static void u79()
+        {
+            int safety = 1;
+            int num = 4;
+            int[] arr = { 3, 1, 5, 2 };
+            int[] arr2 = new int[arr.Length + 1];
+
+            int[] arrTemp = u54(arr);
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] != num)
+                {
+
+                }
+                else
+                {
+                    Console.WriteLine("Number already exists.");
+                    safety = 0;
+                }
+            }
+            if (safety == 1)
+            {
+                for (int i = 0; i < arr2.Length; i++)
+                {
+                    if (i < arr2.Length - 1)
+                    {
+                        arr2[i] = arr[i];
+                    }
+                    else
+                    {
+                        arr2[i] = num;
+                    }
+                }
+                arr2 = u54(arr2);
+                Console.WriteLine(string.Join(", ", arr2));
+            }
+
+
+
+        }
+        static void u80()
+        {
+            int[] arr1 = { 1, 3, 5 };
+            int[] arr2 = { 2, 4, 6 };
+            int[] arr3 = new int[arr1.Length + arr2.Length];
+
+            int arr1count = 0;
+            int arr2count = 0;
+
+            for (int i = 0; i < arr3.Length; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    arr3[i] = arr1[arr1count];
+                    arr1count++;
+                }
+                else
+                {
+                    arr3[i] = arr2[arr2count];
+                    arr2count++;
+                }
+            }
+            Console.WriteLine(string.Join(", ", arr3));
+
+
+
+        }
+        static void u81()
+        {
+            Console.WriteLine("Enter positive or negatives number. \nTo see how many positive or negative numbers there are type: e");
+            int safety = 0;
+            int positive = 0;
+            int negative = 0;
+
+            while (safety == 0)
+            {
+                string s = Console.ReadLine();
+
+                if (s == "e")
+                {
+                    safety++;
+                }
+                else if (int.TryParse(s, out int num))
+                {
+                    if (num > 0)
+                    {
+                        positive++;
+                    }
+                    else if (num < 0)
+                    {
+                        negative++;
+                    }
+                    else
+                    {
+
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Entry must be either a number or e, try again");
+                }
+
+            }
+            Console.WriteLine($"Amount of positive numbers are: {positive}\nAmount of negative numbers are: {negative}");
+
+
+        }
+        static void u82()
+        {
+            int num1 = 6;
+            int num2 = 9;
+            int SGD = 0;
+
+            if (num1 > num2)
+            {
+                int temp = num2;
+                num2 = num1;
+                num1 = temp;
+            }
+
+
+
+            for (int i = num2; i > 0; i--)
+            {
+                if (num1 % i == 0 && num2 % i == 0)
+                {
+                    SGD = i;
+                    break;
+                }
+            }
+
+            Console.WriteLine(SGD);
+
+
+
+
+
+        }
+        static void u83()
+        {
+            Console.WriteLine("Enter sentence you would like to swap o for ö, type: EXIT to exit program");
+            int safety = 0;
+
+            while (safety == 0)
+            {
+                string s2 = string.Empty;
+                Console.Write("Input: ");
+                string s = Console.ReadLine();
+                if (s == "EXIT")
+                {
+                    Environment.Exit(0);
+                    safety++;
+                }
+                else
+                {
+                    for (int i = 0; i < s.Length; i++)
+                    {
+                        if (s[i] == 'o')
+                        {
+                            s2 += 'ö';
+                        }
+                        else if (s[i] == 'O')
+                        {
+                            s2 += 'Ö';
+                        }
+                        else if (s[i] == 'ö')
+                        {
+                            s2 += 'o';
+                        }
+                        else if (s[i] == 'Ö')
+                        {
+                            s2 += 'O';
+                        }
+                        else
+                        {
+                            s2 += s[i];
+                        }
+                    }
+                    Console.WriteLine($"Output: {s2}");
+                }
+            }
+
+
+        }
+        static void u84()
+        {
+            int[] arr = { 3, 5, 10, 2, 6 };
+
+            int temp = arr[arr.Length - 1];
+            int temp3 = arr[arr.Length - 2];
+            int temp2 = 0;
+            int count = 0;
+
+            for (int i = arr.Length - 1; i >= 0; i -= 2)
+            {
+                if (i == arr.Length - 1)
+                {
+                    temp = arr[i - 2];
+                    arr[i - 2] = arr[i];
+                }
+                else if (i > 2)
+                {
+
+                    if (count % 2 == 0)
+                    {
+                        temp2 = arr[i - 2];
+                        arr[i - 2] = temp;
+                        count++;
+                    }
+                    else
+                    {
+                        temp = arr[i - 2];
+                        arr[i - 2] = temp2;
+                        count++;
+                    }
+
+
+                }
+                else if (i == 2)
+                {
+                    if (count % 2 == 0)
+                    {
+                        temp2 = arr[i - 2];
+                        arr[i - 2] = temp;
+                        count++;
+                    }
+                    else
+                    {
+                        temp = arr[i - 2];
+                        arr[i - 2] = temp2;
+                        count++;
+                    }
+                }
+                else if (i == 1)
+                {
+                    if (count % 2 == 0)
+                    {
+                        temp2 = arr[arr.Length - 1];
+                        arr[arr.Length - 1] = temp;
+                        count++;
+                    }
+                    else
+                    {
+                        temp = arr[arr.Length - 1];
+                        arr[arr.Length - 1] = temp2;
+                        count++;
+                    }
+                }
+                else
+                {
+                    if (count % 2 == 0)
+                    {
+                        temp2 = arr[arr.Length - 2];
+                        arr[arr.Length - 2] = temp;
+                        count++;
+                    }
+                    else
+                    {
+                        temp = arr[arr.Length - 2];
+                        arr[arr.Length - 2] = temp2;
+                        count++;
+                    }
+                }
+
+            }
+            count = 0;
+
+            for (int i = arr.Length - 2; i >= 0; i -= 2)
+            {
+                if (i == arr.Length - 2)
+                {
+
+                    temp = arr[i - 2];
+                    arr[i - 2] = temp3;
+                }
+                else if (i > 2)
+                {
+
+                    if (count % 2 == 0)
+                    {
+                        temp2 = arr[i - 2];
+                        arr[i - 2] = temp;
+                        count++;
+                    }
+                    else
+                    {
+                        temp = arr[i - 2];
+                        arr[i - 2] = temp2;
+                        count++;
+                    }
+
+                }
+                else if (i == 2)
+                {
+                    if (count % 2 == 0)
+                    {
+                        temp2 = arr[i - 2];
+                        arr[i - 2] = temp;
+                        count++;
+                    }
+                    else
+                    {
+                        temp = arr[i - 2];
+                        arr[i - 2] = temp2;
+                        count++;
+                    }
+                }
+                else if (i == 1)
+                {
+                    if (count % 2 == 0)
+                    {
+                        temp2 = arr[arr.Length - 1];
+                        arr[arr.Length - 1] = temp;
+                        count++;
+                    }
+                    else
+                    {
+                        temp = arr[arr.Length - 1];
+                        arr[arr.Length - 1] = temp2;
+                        count++;
+                    }
+                }
+                else
+                {
+                    if (count % 2 == 0)
+                    {
+                        temp2 = arr[arr.Length - 2];
+                        arr[arr.Length - 2] = temp;
+                        count++;
+                    }
+                    else
+                    {
+                        temp = arr[arr.Length - 2];
+                        arr[arr.Length - 2] = temp2;
+                        count++;
+                    }
+                }
+
+            }
+            Console.WriteLine(string.Join(", ", arr));
+
+
+        }
+        static void u85AltLösning()
+        {
+            string s = "49142";
+            int n = 3;
+            int index = 0;
+            int turns = 0;
+            if (n > 0 && n < s.Length)
+            {
+
+                while (index <= s.Length - n)
+                {
+                    string print = string.Empty;
+                    turns = 0;
+
+
+                    for (int i = index; turns < n; i++)
+                    {
+                        print += s[i];
+                        turns++;
+                    }
+                    Console.WriteLine(print);
+                    index++;
+
+
+                }
+            }
+            else
+            {
+                Console.WriteLine("n must be bigger than 1, n cannot be longer than s");
+                u85AltLösning();
+            }
+
+
+
+
+        }
+        static void u86()
+        {
+            string binary1 = string.Empty;
+            string binary2 = string.Empty;
+            int num = 2;
+            int num2 = num;
+
+            while (num2 >= 1)
+            {
+                if (num2 % 2 == 0)
+                {
+                    binary1 += 0;
+                    num2 = num2 / 2;
+                }
+                else
+                {
+                    binary1 += 1;
+                    num2 = (num2 / 2);
+                }
+
+
+            }
+            for (int i = binary1.Length - 1; i >= 0; i--)
+            {
+                binary2 += binary1[i];
+            }
+            Console.WriteLine(binary2);
+
+
+
+        }
+        static void u87()
+        {
+            string månad = "March";
+            månad = månad.ToUpper();
+            string avgångsort = "Stockholm";
+            string destination = "Västerås";
+            double distans = 107;
+            int datum = 31;
+            int datumD = datum;
+            int AKlockslagH = 23;
+            double AKlockslagM = 30;
+            double AKlockslagT = AKlockslagH + (AKlockslagM / 60);
+            double timeH = distans / 130;
+            double timeM = timeH * 60;
+            double timeX = timeM + AKlockslagM;
+            double DKlockslagM = 0;
+            double DKlockslagH = AKlockslagH;
+            double timeTm = timeM;
+            double timeTh = 0;
+
+            while (timeM > 60)
+            {
+                timeTh++;
+                timeTm = timeX - 60;
+
+            }
+
+
+            while (timeX > 60)
+            {
+                DKlockslagH = AKlockslagH + 1;
+                timeX = timeX - 60;
+                if (DKlockslagH > 24)
+                {
+                    datumD++;
+                    DKlockslagH = AKlockslagH - 24;
+                }
+
+            }
+            DKlockslagM = timeX;
+            if (AKlockslagM + timeX > 60)
+            {
+                DKlockslagM = (AKlockslagM + timeX - 60);
+                DKlockslagH = DKlockslagH + 1;
+                if (DKlockslagH > 24)
+                {
+                    DKlockslagH = DKlockslagH - 24;
+                    datumD++;
+                }
+                
+            }
+            if (DKlockslagH >= 24)
+            {
+                DKlockslagH = DKlockslagH - 24;
+                datumD++;
+            }
+            timeTm = Math.Round(timeTm);
+            DKlockslagM = Math.Round(DKlockslagM);
+
+            switch (månad)
+            {
+                case "JANUARY":
+                    if (datumD > 31)
+                    {
+                        datumD = datumD - 31;
+                        månad = "February";
+                    }
+                    break;
+                case "FEBRUARY":
+                    if (datumD > 28)
+                    {
+                        datumD = datumD - 28;
+                        månad = "March";
+                    }
+                    break;
+                case "MARCH":
+                    if (datumD > 31)
+                    {
+                        datumD = datumD - 31;
+                        månad = "April";
+                    }
+                    break;
+
+                case "APRIL":
+                    if (datumD > 30)
+                    {
+                        datumD = datumD - 30;
+                        månad = "May";
+                    }
+                    break;
+                case "MAY":
+                    if (datumD > 31)
+                    {
+                        datumD = datumD - 31;
+                        månad = "June";
+                    }
+                    break;
+                case "JUNE":
+                    if (datumD > 30)
+                    {
+                        datumD = datumD - 30;
+                        månad = "July";
+                    }
+                    break;
+                case "JULY":
+                    if (datumD > 31)
+                    {
+                        datumD = datumD - 31;
+                        månad = "August";
+                    }
+                    break;
+                case "AUGUST":
+                    if (datumD > 31)
+                    {
+                        datumD = datumD - 31;
+                        månad = "September";
+                    }
+                    break;
+                case "SEPTEMBER":
+                    if (datumD > 30)
+                    {
+                        datumD = datumD - 30;
+                        månad = "October";
+                    }
+                    break;
+                case "OCTOBER":
+                    if (datumD > 31)
+                    {
+                        datumD = datumD - 31;
+                        månad = "November";
+                    }
+                    break;
+                case "NOVEMBER":
+                    if (datumD > 30)
+                    {
+                        datumD = datumD - 30;
+                        månad = "December";
+                    }
+                    break;
+                case "DECEMBER":
+                    if (datumD > 31)
+                    {
+                        datumD = datumD - 31;
+                        månad = "Januari";
+                    }
+                    break;
+                default:
+                    Console.WriteLine("Month does not exist");
+                    Environment.Exit(0);
+                    break;
+            }
+            string x = "th";
+            if (datumD == 1)
+            {
+                x = "st";
+            }
+            else if (datumD == 2)
+            {
+                x = "nd";
+            }
+            else if (datumD == 3)
+            {
+                x = "rd";
+            }
+            else
+            {
+                x = "th";
+            }
+
+            Console.WriteLine($"Your trip from {avgångsort} to {destination}, departing at {AKlockslagH}:{AKlockslagM} the {datum}{x} of {månad} has a trip time of {timeTh}h{timeTm}min\nYou will arrive the {datumD}{x} of {månad} at time {DKlockslagH}:{DKlockslagM} ");
+
+
+
+
+
+
+
+
+
+        }
+        static void u88()
+        {
+            string sentence = "Svenska äpplen och fem året runt-äpplen";
+            string star = string.Empty;
+
+
+            for (int i = 0; i < sentence.Length; i++)
+            {
+                if (sentence[i] == 'å')
+                {
+                    star += '*';
+
+                }
+                else if (sentence[i] == 'ä')
+                {
+                    star += '%';
+                }
+                else
+                {
+                    star += ' ';
+                }
+            }
+            Console.WriteLine(sentence);
+            Console.WriteLine(star);
+
+
+        }
+        static void u89()
+        {
+            int x = 1234;
+            int sum = 0;
+
+            while (x > 0)
+            {
+                sum += x % 10;
+                x /= 10;
+            }
+
+            Console.WriteLine(sum);
+        }
+        static void u90()
+        {
+            string test = "123+ 123 -6 + 10";
+            string s = string.Empty;
+            int index = 0;
+            int count = 1;
+            int result = 0;
+
+
+            for (int i = index; i < test.Length; i++)
+            {
+                if (char.IsDigit(test[i]))
+                {
+
+                }
+                else if (test[i] == ' ')
+                {
+
+                }
+                else if (test[i] == '+')
+                {
+                    count++;
+                }
+                else if (test[i] == '-')
+                {
+                    count++;
+                }
+                else
+                {
+                    Console.WriteLine("String is not an integer");
+                    Environment.Exit(0);
+                    break;
+                }
+            }
+            int[] arr = new int[count];
+            for (int i = index; i < test.Length; i++)
+            {
+                if (char.IsDigit(test[i]))
+                {
+                    s += test[i];
+                }
+                else if (test[i] == ' ')
+                {
+
+                }
+                else if (test[i] == '+' && i < test.Length-1)
+                {
+                    int x = Convert.ToInt32(s);
+                    arr[index] = x;
+                    index++;
+                    s = string.Empty;
+                }
+                else if (test[i] == '-' && i < test.Length - 1)
+                {
+                    int x = Convert.ToInt32(s);
+                    arr[index] = x;
+                    index++;
+                    s = string.Empty;
+                }
+                if (i == test.Length - 1)
+                {
+                    int x = Convert.ToInt32(s);
+                    arr[index] = x;
+                    s = string.Empty;
+                }
+            }
+            index = 0;
+            result = arr[0];
+            for (int i = 0; i < test.Length; i++)
+            {
+                if (test[i] == '+')
+                {
+                    result += arr[index + 1]; 
+                    index++;
+                }
+                else if (test[i] == '-')
+                {
+                    result -= arr[index+1];
+                    index++;
+                }
+            }
+            Console.WriteLine(result);
+
+        }
+        static void u90alt()
+        {
+            string test = "123+ 123 -6 + 10";
+            string s = string.Empty;
+            int minus = 0;
+            int plus = 0;
+
+            for (int i = 0; i < test.Length; i++)
+            {
+                if (char.IsDigit(test[i]))
+                {
+
+                }
+                else if (test[i] == ' ')
+                {
+
+                }
+                else if (test[i] == '+')
+                {
+                    plus++;
+                }
+                else if (test[i] == '-')
+                {
+                    minus++;
+                }
+                else
+                {
+                    Console.WriteLine("String is not an integer");
+                    Environment.Exit(0);
+                    break;
+                }
+            }
+            if (plus >0 && minus > 0)
+            {
+                Console.WriteLine($"The string is an integer which contains {plus} plus sign(s) and {minus} minus sign(s)");
+            }
+            else if (plus > 0)
+            {
+                Console.WriteLine($"The string is an integer which contains {plus} plus sign(s)");
+            }
+            else if (minus > 0)
+            {
+                Console.WriteLine($"The string is an integer which contains {minus} minus sign(s)");
+            }
+            else
+            {
+                Console.WriteLine($"The string is an integer");
+            }
+
+
+        }
+        static void u91()
+        {
+            string s = "Datorerna Synes Vänliga och Programmen Slutar Vårdslöst.";
+
+            string[] sArr = s.Split(' ');
+
+            for (int i = 0; i < sArr.Length; i++)
+            {
+                Console.Write(sArr[i][0] + " ");
+            }
+        }
+        
+        static void u92Call()
+        {
+            int[] arr = { 9, 1, 8, 2, 7, 3, 6, 4, 5 };
+            int num = 8;
+            Console.WriteLine(u92(arr, num)); 
+        }
+        static bool u92(int[]arr, int num)
+        {
+            int boundry = arr.Length;
+            arr = u54(arr);
+
+            if (num == arr[arr.Length/2])
+            {
+                Console.WriteLine($"{num} exists in array at index position {arr.Length/2}");
+            }
+            else
+            {
+                if(num > arr[arr.Length / 2])
+                {
+                    boundry = (arr.Length / 2) + 1;
+                    for (int i = boundry; i < arr.Length; i++)
+                    {
+                        if(arr[i] == num)
+                        {
+                            Console.WriteLine($"{num} occurs at index position {i} in the array");
+                            return true;
+                        }
+                    }
+
+                }
+                else
+                {
+                    boundry = (arr.Length / 2) - 1;
+                    for (int i = 0; i <= boundry; i++)
+                    {
+                        if (arr[i] == num)
+                        {
+                            Console.WriteLine($"{num} occurs at index position {i} in the array");
+                            return true;
+                        }
+                    }
+
+                }
+            }
+            Console.WriteLine($"{num} does not occur in index");
+            return false;
+
+
+        }
+        static void u93Call()
+        {
+            int[] arr = {6,6,3,3,1,9,4 };
+            u93newArr(arr); 
+        }
+        static bool u93IsDuplicate(int[] arr, int num)
+        {
+            int count = 0;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == num)
+                {
+                    count++;
+                }
+            }
+            if (count > 1)
+            {
+                return true;
+            }
+            else if (count < 1)
+            {
+                Console.WriteLine("Num does not exist in arr");
+                return false;
+            }
+            else
+            {
+                return false;
+            }
+
+
+        }
+        static void u93newArr(int[] arr)
+        {
+            int newArrLenght = 0;
+            int index = 0;
+            
+            
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if(u93IsDuplicate(arr, arr[i]))
+                {
+                    arr=u93duplicatetozero(arr, arr[i]);
+                }
+                else
+                {
+                    
+                }
+            }
+            newArrLenght = (arr.Length - u93countzeros(arr));
+            int[] FinishedArr = new int[newArrLenght];
+            
+            
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] != 0)
+                {
+                    FinishedArr[index] = arr[i];
+                    index++;
+                }
+            }
+            Console.WriteLine(string.Join(", ", FinishedArr));
+
+
+
+
+        }
+        
+        static int[] u93duplicatetozero(int[] arr, int num)
+        {
+            int count = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if(arr[i] == num)
+                {
+                    
+                    if (count == 0)
+                    {
+                        count++;
+                    }
+                    else
+                    {
+                        arr[i] = 0;
+                    }
+                }
+            }
+            return arr;
+
+
+        }
+        static int u93countzeros(int[] arr)
+        {
+            int zeros = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == 0)
+                {
+                    zeros++;
+                }
+            }
+            return zeros;
+        }
+        
+
+
+    }
+}
+
+
+
